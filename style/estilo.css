@@ -127,3 +127,29 @@ body {
   transform: translateY(0);
 }
  
+.sobre-renova {
+  padding: 56px 6%;
+}
+ 
+.sobre-renova h2 {
+  color: var(--cor-secundaria);
+}
+ 
+.cards {
+  display: flex;
+  gap: 28px;
+  margin-top: 36px;
+}
+ 
+.card {
+  background: var(--back-ground);
+  border-radius: 16px;
+  box-shadow: 0px 4px 18px rgba(0,114,255,0.07);
+  padding: 32px;
+  flex: 1;
+}
+ 
+.card h3 {
+  color: var(--cor-primaria);
+}
+ 
