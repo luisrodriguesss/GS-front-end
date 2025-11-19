@@ -558,3 +558,28 @@ secao-contato {
     width: 140px;
     height: 140px;
   }
+  .formulario-contato {
+    padding: 20px;
+  }
+ 
+  .informacoes-contato {
+    padding: 16px;
+  }
+ 
+  .grupo-formulario {
+    margin-bottom: 14px;
+  }
+ 
+  .rodape {
+    padding: 32px 4%;
+  }
+ 
+  .rodape-conteudo {
+    gap: 16px;
+  }
+ 
+  .rodape-copyright {
+    font-size: 0.8rem;
+  }
+}
+ 
