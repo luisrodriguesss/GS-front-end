@@ -281,3 +281,37 @@ body {
 .impacto-item h3 {
   color: var(--cor-secundaria);
 }
+
+.faq {
+  padding: 56px 6%;
+  background: linear-gradient(180deg, rgba(227,246,252,0.4) 0%, rgba(244,250,253,0.4) 100%);
+}
+ 
+.faq h2 {
+  color: var(--cor-primaria);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.9rem;
+}
+ 
+.faq .faq-item {
+  background: var(--back-ground);
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 8px 20px rgba(0,114,255,0.06);
+  margin: 12px auto;
+  max-width: 900px;
+}
+ 
+.faq .faq-item h3 {
+  color: var(--cor-secundaria);
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+ 
+.faq .faq-item p {
+  color: #222831;
+  line-height: 1.55;
+  margin: 0;
+}
+ 
