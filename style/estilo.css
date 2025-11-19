@@ -539,3 +539,22 @@ secao-contato {
   .logo h1 {
     font-size: 1.5rem;
   }
+  .hero-conteudo h2 {
+    font-size: 1.3rem;
+  }
+ 
+  .cabecalho img {
+    width: 60px;
+    height: 60px;
+    transform: scale(1.2);
+  }
+ 
+  .integrante-card {
+    width: 100%;
+    max-width: 480px;
+  }
+ 
+  .integrante-card img {
+    width: 140px;
+    height: 140px;
+  }
