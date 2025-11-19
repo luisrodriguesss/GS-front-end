@@ -252,3 +252,32 @@ body {
   border-left-color: var(--cor-secundaria);
   padding-left: 16px;
 }
+
+.impacto {
+  padding: 56px 6%;
+}
+ 
+.impacto h2 {
+  color: var(--cor-primaria);
+}
+ 
+.impacto-lista {
+  display: flex;
+  gap: 28px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+ 
+.impacto-item {
+  background: var(--back-ground);
+  border-radius: 16px;
+  box-shadow: 0px 4px 18px rgba(0,114,255,0.07);
+  padding: 32px;
+  flex: 1;
+  min-width: 220px;
+  border-left: 5px solid var(--cor-secundaria);
+}
+ 
+.impacto-item h3 {
+  color: var(--cor-secundaria);
+}
