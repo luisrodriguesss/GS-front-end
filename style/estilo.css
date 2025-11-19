@@ -420,3 +420,69 @@ secao-contato {
   color: #0056b3;
   text-decoration: underline;
 }
+
+.rodape {
+  background: linear-gradient(135deg, #222831 0%, #1a1f26 100%);
+  color: #fff;
+  padding: 40px 6% 20px 6%;
+  margin-top: 56px;
+}
+ 
+.rodape-conteudo {
+  max-width: 1200px;
+  margin: 0 auto 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+ 
+.rodape-info h3 {
+  font-size: 1.1rem;
+  color: var(--cor-secundaria);
+  margin-bottom: 8px;
+}
+ 
+.rodape-info p {
+  color: #b0bec5;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 300px;
+}
+ 
+.rodape-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+ 
+.rodape-contato p {
+  margin: 0;
+  color: #b0bec5;
+  font-size: 0.9rem;
+}
+ 
+.rodape-contato strong {
+  color: var(--cor-secundaria);
+}
+ 
+.rodape-contato a {
+  color: #b0bec5;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+ 
+.rodape-contato a:hover {
+  color: var(--cor-secundaria);
+}
+ 
+.rodape-copyright {
+  text-align: center;
+  color: #90a4ae;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
