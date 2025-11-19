@@ -161,3 +161,59 @@ body {
 .futuro-trabalho h2 {
   color: var(--cor-secundaria);
 }
+
+.integrantes-section {
+  padding: 48px 6%;
+  text-align: center;
+}
+ 
+.integrantes-section h2 {
+  color: var(--cor-primaria);
+  margin-bottom: 18px;
+}
+ 
+.integrantes-container {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+ 
+.integrante-card {
+  background: var(--back-ground);
+  border-radius: 12px;
+  padding: 18px 14px;
+  width: 300px;
+  box-shadow: 0 6px 18px rgba(0,114,255,0.06);
+  text-align: center;
+  transition: transform .18s ease, box-shadow .18s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.integrante-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,114,255,0.12);
+}
+ 
+.integrante-card img {
+  width: 220px;
+  height: 220px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+ 
+.integrante-card img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 12px 24px rgba(0,114,255,0.12);
+}
+ 
+.integrante-card h3 {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #222831;
+}
