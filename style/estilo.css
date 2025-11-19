@@ -12,7 +12,7 @@ body {
 }
 :root{
   --back-ground: #f4fafd;
-  --cor-primaria: #0072ff;
+  --cor-primaria: # ;
   --cor-secundaria: #00bfae;
   --texto: #222831;
   --gap: 24px;
@@ -70,5 +70,30 @@ body {
 .menu a:hover {
   color: var(--cor-secundaria);
   border-bottom: 2px solid var(--cor-secundaria);
+}
+ 
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 56px 6% 40px 6%;
+  background: linear-gradient(90deg, #e3f6fc 60%, var(--back-ground));
+}
+ 
+.hero-conteudo {
+  max-width: 520px;
+}
+ 
+.hero-conteudo h2 {
+  font-size: 2.5rem;
+  color: var(--cor-primaria);
+}
+ 
+.hero-conteudo p {
+  margin: 22px 0;
+}
+ 
+.hero-imagem img {
+  max-width: 360px;
 }
  
