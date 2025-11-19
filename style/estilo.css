@@ -111,3 +111,19 @@ body {
   border: none;
   cursor: pointer;
 }
+
+.botao:hover, .botao-submit:hover {
+  background: linear-gradient(90deg,var(--cor-primaria), var(--cor-secundaria));
+  transform: translateY(-3px) scale(1.04);
+}
+ 
+.botao-submit {
+  width: 100%;
+  padding: 14px 28px;
+  font-size: 1rem;
+}
+ 
+.botao-submit:active {
+  transform: translateY(0);
+}
+ 
