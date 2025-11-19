@@ -217,3 +217,38 @@ body {
   font-size: 1rem;
   color: #222831;
 }
+
+.social-section {
+  padding: 56px 6%;
+  background: #fff;
+}
+ 
+.social-links {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+ 
+.social-links h3 {
+  color: var(--cor-primaria);
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+ 
+.social-links a {
+  display: block;
+  color: var(--cor-primaria);
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color .2s ease, padding-left .2s ease;
+  border-left: 3px solid transparent;
+  padding-left: 12px;
+}
+ 
+.social-links a:hover {
+  color: var(--cor-secundaria);
+  border-left-color: var(--cor-secundaria);
+  padding-left: 16px;
+}
