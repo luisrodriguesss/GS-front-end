@@ -379,3 +379,44 @@ secao-contato {
   min-height: 140px;
   font-family: 'Montserrat', Arial, sans-serif;
 }
+
+.informacoes-contato {
+  background: var(--back-ground);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0,114,255,0.08);
+}
+ 
+.informacoes-contato h3 {
+  color: var(--cor-primaria);
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+ 
+.info-item {
+  margin-bottom: 18px;
+}
+ 
+.info-item strong {
+  color: var(--cor-secundaria);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+ 
+.info-item p {
+  color: #222831;
+  margin: 0;
+}
+ 
+.info-item a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .14s ease;
+}
+ 
+.info-item a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
