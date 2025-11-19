@@ -528,4 +528,14 @@ secao-contato {
   .cabecalho, .sobre-renova, .futuro-trabalho, .impacto, .secao-contato {
     padding: 32px 4%;
   }
+ .hero {
+    padding: 32px 4%;
+  }
  
+  .menu a {
+    margin-right: 14px;
+  }
+ 
+  .logo h1 {
+    font-size: 1.5rem;
+  }
