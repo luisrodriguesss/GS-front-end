@@ -504,3 +504,28 @@ secao-contato {
   .card, .impacto-item {
     width: 100%;
   }
+
+  .container-contato {
+    grid-template-columns: 1fr;
+  }
+ 
+  .integrante-card {
+    width: 340px;
+  }
+ 
+  .integrante-card img {
+    width: 160px;
+    height: 160px;
+  }
+ 
+  .rodape-conteudo {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+ 
+@media (max-width: 600px) {
+  .cabecalho, .sobre-renova, .futuro-trabalho, .impacto, .secao-contato {
+    padding: 32px 4%;
+  }
+ 
