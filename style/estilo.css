@@ -486,3 +486,9 @@ secao-contato {
   margin: 0 auto;
   max-width: 1200px;
 }
+
+@media (max-width: 950px) {
+  .hero, .cards, .impacto-lista, .container-contato {
+    flex-direction: column;
+    align-items: center;
+  }
