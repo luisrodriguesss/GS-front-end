@@ -27,41 +27,70 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => closeMenu()));
   }
 
-  const form = document.querySelector('form.formulario-contato');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      
-      form.querySelectorAll('.error-message').forEach(el => el.remove());
+  const form = document.querySelector(".formulario-contato");
+  const nome = document.getElementById("nome");
+  const email = document.getElementById("email");
+  const telefone = document.getElementById("telefone");
+  const assunto = document.getElementById("assunto");
+  const mensagem = document.getElementById("mensagem");
 
-      const requiredFields = Array.from(form.querySelectorAll('[required]'));
-      let valid = true;
+  function mostrarErro(campo, mensagem) {
+    campo.style.borderColor = "#ff4d4d";
 
-      requiredFields.forEach(field => {
-        const value = (field.value || '').trim();
-        if (!value) {
-          valid = false;
-          const msg = document.createElement('div');
-          msg.className = 'error-message';
-          msg.textContent = 'Este campo é obrigatório';
-          field.parentNode.appendChild(msg);
-        }
-      });
+    let erro = campo.parentElement.querySelector(".erro-msg");
 
-      if (!valid) {
-        e.preventDefault();
-        const firstError = form.querySelector('.error-message');
-        if (firstError) {
-          const focusTarget = firstError.previousElementSibling;
-          if (focusTarget && typeof focusTarget.focus === 'function') focusTarget.focus();
-        }
-      }
-    });
+    if (!erro) {
+      erro = document.createElement("small");
+      erro.classList.add("erro-msg");
+      erro.style.color = "#ff4d4d";
+      erro.style.marginTop = "4px";
+      campo.parentElement.appendChild(erro);
+    }
 
-    form.addEventListener('input', (e) => {
-      const field = e.target;
-      if (!(field instanceof HTMLElement)) return;
-      const msg = field.parentNode && field.parentNode.querySelector && field.parentNode.querySelector('.error-message');
-      if (msg && (field.value || '').trim()) msg.remove();
-    });
+    erro.innerText = mensagem;
   }
+
+  function limparErro(campo) {
+    campo.style.borderColor = "#e0f7fa";
+
+    const erro = campo.parentElement.querySelector(".erro-msg");
+    if (erro) erro.remove();
+  }
+
+  [nome, email, telefone, assunto, mensagem].forEach(campo => {
+    campo.addEventListener("input", () => limparErro(campo));
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    let valido = true;
+
+    if (nome.value.trim() === "") {
+      mostrarErro(nome, "Digite seu nome completo.");
+      valido = false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value.trim())) {
+      mostrarErro(email, "Digite um email válido.");
+      valido = false;
+    }
+
+    if (assunto.value === "") {
+      mostrarErro(assunto, "Selecione um assunto.");
+      valido = false;
+    }
+
+    if (mensagem.value.trim().length < 10) {
+      mostrarErro(mensagem, "A mensagem deve ter pelo menos 10 caracteres.");
+      valido = false;
+    }
+
+    if (valido) {
+      alert("Mensagem enviada com sucesso!");
+      form.reset();
+    }
+  });
+
+
 });
