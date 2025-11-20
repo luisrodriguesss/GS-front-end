@@ -10,6 +10,12 @@ body {
   color: #222831;
   line-height: 1.6;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 :root{
   --back-ground: #f4fafd;
   --cor-primaria: #0072ff;
@@ -43,11 +49,11 @@ body {
  
 .cabecalho img {
   width: 120px;
-  height: 120px;
+  height: auto;
   object-fit: contain;
   transition: transform .18s ease-in-out;
   transform-origin: left center;
-  transform: scale(1.5);
+  transform: none;
 }
  
 .menu {
@@ -315,7 +321,7 @@ body {
   margin: 0;
 }
  
-secao-contato {
+.secao-contato {
   padding: 56px 6%;
   background: linear-gradient(135deg, #f4fafd 0%, #e3f6fc 100%);
 }
@@ -581,5 +587,65 @@ secao-contato {
   .rodape-copyright {
     font-size: 0.8rem;
   }
+}
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.menu-toggle .hamburger {
+  width: 26px;
+  height: 2px;
+  background: #fff;
+  display: block;
+  position: relative;
+}
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 26px;
+  height: 2px;
+  background: #fff;
+  transition: transform .18s ease, top .18s ease;
+}
+.menu-toggle .hamburger::before { top: -8px; }
+.menu-toggle .hamburger::after { top: 8px; }
+.menu-toggle.is-open .hamburger { background: transparent; }
+.menu-toggle.is-open .hamburger::before { transform: translateY(8px) rotate(45deg); }
+.menu-toggle.is-open .hamburger::after { transform: translateY(-8px) rotate(-45deg); }
+
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+    width: 100%;
+  }
+  .menu.menu-open {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .menu a {
+    padding: 10px 12px;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+  }
+  .menu-toggle {
+    display: block;
+    margin-left: 12px;
+  }
+  .cabecalho {
+    align-items: center;
+  }
+}
+
+.error-message {
+  color: #c62828;
+  font-size: 0.9rem;
 }
  

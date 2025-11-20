@@ -10,8 +10,13 @@
 
 <body>
     <header class="cabecalho">
-        <img src="../style/assets/img/logo.png" alt="logo-RENOVA">
-        <nav class="menu">
+        <div class="logo">
+            <img src="../style/assets/img/logo.png" alt="logo-RENOVA">
+        </div>
+        <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu">
+            <span class="hamburger"></span>
+        </button>
+        <nav id="main-menu" class="menu">
             <a href="../index.html">Início</a>
             <a href="./sobre.html">Sobre</a>
             <a href="./faq.html">Faq</a>
@@ -66,4 +71,5 @@
         <p class="rodape-copyright">&copy; 2025 RENOVA — O Futuro do Trabalho.</p>
     </footer>
 </body>
+<script src="../js/main.js" defer></script>
 </html>
